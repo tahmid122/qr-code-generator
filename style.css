@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+}
+.container {
+  width: 90%;
+  border-radius: 10px;
+  background-color: white;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.qr-box input {
+  width: 100%;
+  outline: 0;
+  padding: 10px;
+  height: 50px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.shake {
+  animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+  0% {
+    transform: translateX(0);
+  }
+}
+
+.qr-box button {
+  display: block;
+  width: 100%;
+  background-color: teal;
+  border: 0;
+  outline: 0;
+  color: white;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.img-box {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 0;
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: max-height 5s;
+}
+.img-box.show-qr {
+  max-height: 300px;
+}
+#qrImage {
+  height: 250px;
+  width: 250px;
+}
